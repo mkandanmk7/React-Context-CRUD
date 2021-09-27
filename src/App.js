@@ -28,6 +28,7 @@ function App() {
 
   return (
     <>
+      <h2>Count</h2>
       <Context.provider>
         <BrowserRouter>
           <Header />

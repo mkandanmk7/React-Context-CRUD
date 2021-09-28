@@ -22,6 +22,15 @@ const Header = () => {
               Users
             </NavLink>
           </div>
+          <div className="navdiv">
+            <NavLink
+              to="/createuser"
+              className="navlink"
+              activeClassName="activenavlink"
+            >
+              Create User
+            </NavLink>
+          </div>
         </div>
       </div>
     </>

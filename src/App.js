@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import CreateUser from "./Components/CreateUser/CreateUser";
 import EditProfile from "./Components/EditProfile/EditProfile";
@@ -36,6 +36,9 @@ function App() {
             <Route path="edituser/:id" component={EditUser} />
             <Route path="/profile" component={Profile} />
             <Route path="/edit-profile/:id" component={EditProfile} />
+            <Route path="/home">
+              <Redirect to="/" />
+            </Route>
           </Switch>
         </BrowserRouter>
       </Context.Provider>

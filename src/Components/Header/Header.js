@@ -1,10 +1,30 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
+    <>
+      <div className="header">
+        <input type="checkbox" id="check" />
+        <label id="label" htmlFor="check">
+          <span className="brand">
+            <i className="fas fa-house-user"></i>
+          </span>
+        </label>
+        <div className="headermove">
+          <div className="navdiv">
+            <NavLink
+              exact
+              to="/"
+              className="navlink brand"
+              activeClassName="activenavlink"
+            >
+              Users
+            </NavLink>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

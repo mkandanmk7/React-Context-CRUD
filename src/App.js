@@ -5,7 +5,6 @@ import "./App.css";
 import CreateUser from "./Components/CreateUser/CreateUser";
 import EditProfile from "./Components/EditProfile/EditProfile";
 import EditUser from "./Components/EditUser/EditUser";
-
 import Header from "./Components/Header/Header";
 import Profile from "./Components/Profile/Profile";
 import Users from "./Components/Users/Users";
@@ -28,8 +27,7 @@ function App() {
 
   return (
     <>
-      <h2>Count</h2>
-      <Context.provider>
+      <Context.Provider value={{ users, setUsers }}>
         <BrowserRouter>
           <Header />
           <Switch>
@@ -40,7 +38,7 @@ function App() {
             <Route path="/edit-profile/:id" component={EditProfile} />
           </Switch>
         </BrowserRouter>
-      </Context.provider>
+      </Context.Provider>
     </>
   );
 }
